@@ -1,5 +1,5 @@
 CREATE TABLE "article_categories" (
-  "id" int PRIMARY KEY,
+  "id" bigserial PRIMARY KEY,
   "category_id" int NOT NULL,
   "article_id" int NOT NULL,
   "created_at" timestamptz NOT NULL DEFAULT (now()),
