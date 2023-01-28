@@ -6,26 +6,29 @@ package db
 
 import (
 	"database/sql"
+	"time"
 )
 
 type Article struct {
 	ID        int32
 	Title     sql.NullString
 	Content   sql.NullString
-	CreatedAt sql.NullTime
-	UpdatedAt sql.NullTime
+	CreatedAt time.Time
+	UpdatedAt time.Time
 }
 
 type ArticleCategory struct {
 	ID         int32
 	CategoryID int32
 	ArticleID  int32
+	CreatedAt  time.Time
+	UpdatedAt  time.Time
 }
 
 type Category struct {
 	ID          int32
 	Name        sql.NullString
 	Description sql.NullString
-	CreatedAt   sql.NullTime
-	UpdatedAt   sql.NullTime
+	CreatedAt   time.Time
+	UpdatedAt   time.Time
 }
